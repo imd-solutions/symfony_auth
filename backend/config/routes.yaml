@@ -1,0 +1,26 @@
+register:
+  path: /auth/register
+  controller: App\Controller\AuthController::index
+  methods: ["POST"]
+  defaults:
+    _format: json
+
+login:
+  path: /auth/login
+  methods: ["POST"]
+  defaults:
+    _format: json
+
+api_user:
+  path: /api/user
+  controller: App\Controller\UserController::index
+  methods: ["GET"]
+  defaults:
+    _format: json
+
+update_user:
+  path: /api/update/{id}
+  controller: App\Controller\UserController::update
+  methods: ["POST"]
+  defaults:
+    _format: json

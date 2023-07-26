@@ -1,0 +1,23 @@
+FROM node:12.20-alpine as frontend-app
+
+# update and install dependency
+RUN apk update && apk upgrade
+RUN apk add git
+
+# create destination directory
+RUN mkdir -p /var/www/html/frontend
+WORKDIR /var/www/html/frontend
+
+# copy package.json file to frontend directory.
+COPY package*.json /var/www/html/frontend/
+RUN npm install
+
+# copy the rest of the frontend files to the frontend directory.
+COPY ./ /var/www/html/frontend/
+
+# expose 3000 on container
+EXPOSE 3000
+
+
+# Start command
+CMD [ "npm", "run", "start" ]

@@ -1,6 +1,7 @@
 # Symfony Auth Project
 
 Copy .env.example to .env (everything is configured)
+Go to the backend directory and copy .env.example to .env
 
 In your terminal:
 

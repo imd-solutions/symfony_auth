@@ -1,4 +1,4 @@
-# Symfony Auth Project
+# laravel Auth Project
 
 # Step 1
 
@@ -14,14 +14,14 @@ In your terminal:
 
 # Step 1
 
-Run "docker-compose --project-name symfony_dev -f docker-compose-dev.yml up --build" (add -d if you don't want to see it running all the time)
+Run "docker-compose --project-name laravel_dev -f docker-compose-dev.yml up --build" (add -d if you don't want to see it running all the time)
 
 when all installed:
 
 # Step 2
 
-Run "docker-compose --project-name symfony_dev -f docker-compose-dev.yml run --rm composer install" (to get the symfony vendor file)
-Run "docker-compose --project-name symfony_dev -f docker-compose-dev.yml run --rm symfony doctrine:migrations:migrate" (to migrate the database)
+Run "docker-compose --project-name laravel_dev -f docker-compose-dev.yml run --rm composer install" (to get the laravel vendor file)
+Run "docker-compose --project-name laravel_dev -f docker-compose-dev.yml run --rm laravel doctrine:migrations:migrate" (to migrate the database)
 
 # When all is working
 

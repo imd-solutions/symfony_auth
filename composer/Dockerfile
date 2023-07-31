@@ -1,5 +1,5 @@
 FROM composer:latest
 
-RUN addgroup -g 1000 symfony && adduser -G symfony -g symfony -s /bin/sh -D symfony
+RUN addgroup -g 1000 laravel && adduser -G laravel -g laravel -s /bin/sh -D laravel
 
 WORKDIR /var/www/html/backend
